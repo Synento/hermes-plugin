@@ -121,7 +121,7 @@ test('export allowlist matches the plugin directory', () => {
     for (const entry of readdirSync(dir, { withFileTypes: true })) {
       const rel = prefix ? `${prefix}/${entry.name}` : entry.name
       if (entry.isDirectory()) {
-        if (entry.name === 'dist-public' || entry.name === 'node_modules') continue
+        if (entry.name === '.git' || entry.name === 'dist-public' || entry.name === 'node_modules') continue
         walk(join(dir, entry.name), rel)
       } else if (!publicFiles.includes(rel)) {
         extras.push(rel)
