@@ -1,0 +1,44 @@
+# Unsubmitted native MCP catalog manifest.
+# Hermes parses this shape in hermes_cli/mcp_catalog.py (_parse_manifest).
+# Presence in optional-mcps/ is Nous approval. This file is not in that tree.
+# Do not add a trust key here. The parser ignores unknown fields, and
+# _build_server_config writes url and auth only. A trust key would look
+# protective and do nothing.
+manifest_version: 1
+
+name: synento
+connector_slug: synento
+description: Create live video sessions that record themselves, then read the recording back.
+source: https://synento.com/docs/guides/mcp
+
+transport:
+  type: http
+  url: https://api.synento.com/mcp
+
+auth:
+  type: oauth
+
+suggest:
+  keywords:
+    - synento
+    - live video
+    - call recording
+  hosts:
+    - synento.com
+    - api.synento.com
+  examples:
+    - Create a video session and check that camera and microphone media arrived
+
+post_install: |
+  Hermes wrote url and auth: oauth for mcp_servers.synento. It did not set
+  trust. Add trust: untrusted on that entry so write tools ask first. A
+  same-named portable plugin server is replaced by this entry, trust included.
+
+  Sign-in is a browser flow, not a one-click install:
+
+    hermes mcp login synento
+    hermes mcp test synento
+
+  In a running session, /reload-mcp loads the tools. An unattended run cannot
+  finish login. Write tools can create projects, sessions, keys, and a short
+  synthetic call. Those use plan allowance and can fire webhooks.

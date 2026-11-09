@@ -1,0 +1,25 @@
+{
+  "files": [
+    ".github/workflows/test.yml",
+    ".gitignore",
+    "DISCLOSURE.md",
+    "LICENSE",
+    "README.md",
+    "VALIDATION.md",
+    "mcp.json",
+    "optional-mcp/CONTRIBUTION.md",
+    "optional-mcp/synento/manifest.yaml",
+    "package.json",
+    "plugin.json",
+    "publication/REMAINING.md",
+    "publication/export-public.mjs",
+    "publication/plugin-catalog-entry.yaml",
+    "publication/public-files.json",
+    "publication/pull-request-body.md",
+    "skills/synento/SKILL.md",
+    "test/hermes-live.test.mjs",
+    "test/mcp-responses.mjs",
+    "test/mock-mcp.test.mjs",
+    "test/static.test.mjs"
+  ]
+}

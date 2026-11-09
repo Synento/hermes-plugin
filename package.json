@@ -1,0 +1,14 @@
+{
+  "name": "synento-hermes-plugin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hermes portable plugin for the Synento live-video MCP server.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Synento/hermes-plugin"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  }
+}

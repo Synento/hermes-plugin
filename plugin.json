@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "author": {
+    "name": "Synento",
+    "url": "https://synento.com"
+  },
+  "description": "Live video sessions that record themselves. The agent uses a restricted server key, then checks the recording before calling the integration working.",
+  "extensions": {
+    "com.nousresearch.hermes": {
+      "servers": {
+        "synento": {
+          "trust": "untrusted"
+        }
+      }
+    }
+  },
+  "homepage": "https://synento.com/agents",
+  "keywords": ["live-video", "mcp", "recording", "synento", "video"],
+  "license": "MIT",
+  "name": "synento",
+  "repository": "https://github.com/Synento/hermes-plugin",
+  "version": "1.0.0"
+}
